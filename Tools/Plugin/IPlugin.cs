@@ -2,12 +2,12 @@
 
 namespace Tools.Plugin
 {
-    public interface IPlugin
+    public interface IPlugin<T>
     {
         string Name { get; set; }
         IPluginSettings PluginSettings { get; set; }
         bool Init();
-        List<string> Execute();
+        List<T> Execute();
         bool Exit();
     }
 }
